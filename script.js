@@ -22,55 +22,6 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeLightbox();
 });
 
-const projects = [
-  {
-    title: "RAG Chatbot Akademik",
-    desc: "Chatbot Retrieval-Augmented Generation untuk layanan akademik mahasiswa menggunakan Python, LangChain, dan Vector Database.",
-    tech: ["Python", "LangChain", "FAISS", "Streamlit"],
-    github: "https://github.com/muhammadfisabilillah/rag-chatbot",
-    demo: "",
-    image: "images/projects/rag-chatbot.jpg"
-  },
-  {
-    title: "Valoz.id — Brand Platform",
-    desc: "Platform brand management untuk UMKM: identitas visual, strategi konten, dan social media automation.",
-    tech: ["Figma", "Notion", "Meta Business Suite", "Canva"],
-    github: "",
-    demo: "https://valoz.id",
-    image: "images/projects/valoz.jpg"
-  },
-  {
-    title: "Data Mining Dashboard",
-    desc: "Dashboard analisis data UMKM dengan visualisasi interaktif untuk insight bisnis dan pengambilan keputusan.",
-    tech: ["Python", "Pandas", "Plotly", "Streamlit"],
-    github: "https://github.com/muhammadfisabilillah/data-mining-dashboard",
-    demo: "",
-    image: "images/projects/dashboard.jpg"
-  }
-];
-
-function renderProjects() {
-  const grid = document.getElementById('projects-grid');
-  grid.innerHTML = projects.map(p => `
-    <article class="project-card">
-      <img class="project-thumb" src="${p.image}" alt="${p.title}" loading="lazy" />
-      <div class="project-body">
-        <h3 class="project-title">${p.title}</h3>
-        <p class="project-desc">${p.desc}</p>
-        <div class="project-tech">
-          ${p.tech.map(t => `<span>${t}</span>`).join('')}
-        </div>
-        <div class="project-links">
-          ${p.github ? `<a href="${p.github}" target="_blank">GitHub</a>` : ''}
-          ${p.demo ? `<a href="${p.demo}" target="_blank">Live Demo</a>` : ''}
-        </div>
-      </div>
-    </article>
-  `).join('');
-}
-
-document.addEventListener('DOMContentLoaded', renderProjects);
-
 // =====================
 // SMOOTH SCROLL (fallback for older browsers)
 // =====================
