@@ -23,6 +23,15 @@ document.addEventListener('keydown', function (e) {
 });
 
 // =====================
+// MORE PROJECTS TOGGLE
+// =====================
+document.getElementById('more-projects-btn').addEventListener('click', function () {
+  const hiddenCards = document.querySelectorAll('#projects .project-card.hidden');
+  hiddenCards.forEach(card => card.classList.remove('hidden'));
+  this.style.display = 'none';
+});
+
+// =====================
 // SMOOTH SCROLL (fallback for older browsers)
 // =====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
