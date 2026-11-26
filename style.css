@@ -225,14 +225,50 @@ section {
 .project-link {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   font-size: 14px;
   font-weight: 500;
   color: #C8522A;
   text-decoration: none;
+  transition: all .2s;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.project-link .link-arrow {
+  transition: transform .2s;
+}
+
+.project-link:hover .link-arrow {
+  transform: translateX(3px);
+}
+
+/* Featured project card */
+.project-card.featured {
+  position: relative;
+  padding-left: 16px;
+  border-left: 3px solid #C8522A;
+  background: #FFFDFB;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-radius: 0 8px 8px 0;
+}
+
+.project-card.featured::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #C8522A;
+}
+
+.project-card.featured h3 {
+  color: #111;
 }
 
 .project-toggle {
